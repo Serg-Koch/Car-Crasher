@@ -9,11 +9,13 @@ TagManager:
   - RearSide
   - FrontSide
   - Floor
-  - Good
   - GoodPart
   - BadPart
-  - Bad
   - Inactive
+  - GoodBody
+  - GoodEngine
+  - BadBody
+  - BadEngine
   layers:
   - Default
   - TransparentFX
