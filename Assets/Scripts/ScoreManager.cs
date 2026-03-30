@@ -1,19 +1,40 @@
 using UnityEngine;
+using System;
 
 public class ScoreManager : MonoBehaviour
 {
-    /*public int count = 0;
-        private void ParentDestroy()
+     public static event Action <int> ScoreChange;
+    public int CountRound {get; private set;} = 0;
+    public int CountCommon {get; private set;} = 0;
+    public int BonusPoints {get; private set;} = 100;
+    
+    public void AddRoundPoints(GameObject gameObject)
     {
-        gameObject.transform.DetachChildren();
-        /*if (_gameScore.count + points < 0)
-        {
-            _gameScore.count = 0;
-        }
-        else
-        {
-            _gameScore.count += points;
-        }
-        Destroy(gameObject);
-    }*/
+        var properties = gameObject.GetComponent<ObjectProperties>();
+        CountRound += properties.Points;
+        ScoreChange?.Invoke(CountRound);
+    }
+    public void AddBonusPoints()
+    {
+        CountRound += BonusPoints;
+        ScoreChange?.Invoke(CountRound);
+    }
+    public void AddCommonPoints()
+    {
+        CountCommon += CountRound;
+    }
+    private void OnEnable()
+    {
+        ObjectDestroy.DestroyFromMouse += AddRoundPoints;
+        //ObjectDestroy.DestroyFromFloor += AddRoundPoints(gameObject);
+        ObjectDestroy.DestroyFromGoodCar += AddBonusPoints;
+        //ObjectDestroy.DestroyFromBadCar += AddRoundPoints(gameObject);
+    }
+        private void OnDisable()
+    {
+        ObjectDestroy.DestroyFromMouse -= AddRoundPoints;
+        //ObjectDestroy.DestroyFromFloor -= AddRoundPoints(gameObject);
+        ObjectDestroy.DestroyFromGoodCar -= AddBonusPoints;
+        //ObjectDestroy.DestroyFromBadCar -= AddRoundPoints(gameObject);
+    }
 }

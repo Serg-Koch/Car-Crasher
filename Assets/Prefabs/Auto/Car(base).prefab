@@ -1272,6 +1272,7 @@ GameObject:
   - component: {fileID: 2149676121448074172}
   - component: {fileID: 6211893897897187674}
   - component: {fileID: 2363569788416077209}
+  - component: {fileID: 6058978019027012869}
   m_Layer: 0
   m_Name: Car(base)
   m_TagString: Untagged
@@ -1380,6 +1381,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135ba87f80d9c438a908e8ba7809f242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectDestroy
+--- !u!114 &6058978019027012869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184320504962458225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad74faf9339d56eb39230605009bac6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectProperties
+  _points: 10
 --- !u!1 &8541858272596683522
 GameObject:
   m_ObjectHideFlags: 0
