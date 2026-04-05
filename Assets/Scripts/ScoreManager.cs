@@ -3,7 +3,7 @@ using System;
 
 public class ScoreManager : MonoBehaviour
 {
-     public static event Action <int> ScoreChange;
+    public static event Action <int> ScoreChange;
     public int CountRound {get; private set;} = 0;
     public int CountCommon {get; private set;} = 0;
     public int BonusPoints {get; private set;} = 100;

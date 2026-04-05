@@ -7,7 +7,7 @@ public class ObjectDestroy : MonoBehaviour
     public static event Action DestroyFromFloor;
     public static event Action DestroyFromGoodCar;
     public static event Action DestroyFromBadCar;
-    private void MouseDestroy()
+    public void MouseDestroy()
     {
         gameObject.transform.DetachChildren();
         DestroyFromMouse?.Invoke(gameObject);
@@ -35,10 +35,10 @@ public class ObjectDestroy : MonoBehaviour
         //DestroyFromBadCar?.Invoke();
         Destroy(gameObject);
     }
-    private void OnMouseDown()
+    /*private void OnMouseDown()
     {
         MouseDestroy();
-    }
+    }*/
 
     private void OnCollisionEnter(Collision other)
     {
@@ -54,16 +54,5 @@ public class ObjectDestroy : MonoBehaviour
                 GoodCarDestroy();
                 break;
         }
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

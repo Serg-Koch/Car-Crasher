@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7281115507704283684}
   - component: {fileID: 605301337322404759}
   - component: {fileID: 1420029388491204364}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bumper_F
   m_TagString: FrontSide
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 477731514147057914}
   - component: {fileID: 9023917877310468965}
   - component: {fileID: 8781977337806509214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hood
   m_TagString: FrontSide
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 2391732766099332309}
   - component: {fileID: 3559220111659468124}
   - component: {fileID: 7974823577655367174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel_R_R
   m_TagString: RightSide
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 7669551329876067362}
   - component: {fileID: 7593658640122361181}
   - component: {fileID: 9092519906328995859}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trunk_lid
   m_TagString: RearSide
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 1927015671396536887}
   - component: {fileID: 4084532698908155983}
   - component: {fileID: 3352655671602468692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EngineV8
   m_TagString: GoodEngine
   m_Icon: {fileID: 0}
@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 666616382053799004}
   - component: {fileID: 7627667250307733196}
   - component: {fileID: 7870542713581089011}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door_L
   m_TagString: LeftSide
   m_Icon: {fileID: 0}
@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 2565365152807847137}
   - component: {fileID: 9056993296458028308}
   - component: {fileID: 7537687479294641716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bumper_R
   m_TagString: RearSide
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 4891176319868940632}
   - component: {fileID: 29358963554568705}
   - component: {fileID: 1737628298896736584}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel_R_L
   m_TagString: LeftSide
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 8239977471659792267}
   - component: {fileID: 5070108589709737811}
   - component: {fileID: 477515200232315523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel_F_L
   m_TagString: LeftSide
   m_Icon: {fileID: 0}
@@ -1143,7 +1143,7 @@ GameObject:
   - component: {fileID: 2475308249457741643}
   - component: {fileID: 4113971996771621968}
   - component: {fileID: 3903116168403805953}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: GoodBody
   m_Icon: {fileID: 0}
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 6211893897897187674}
   - component: {fileID: 2363569788416077209}
   - component: {fileID: 6058978019027012869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Car(base)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1407,7 +1407,7 @@ GameObject:
   - component: {fileID: 6616005561291123199}
   - component: {fileID: 2125938859910111856}
   - component: {fileID: 2185361875220548948}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wheel_F_R
   m_TagString: RightSide
   m_Icon: {fileID: 0}
@@ -1533,7 +1533,7 @@ GameObject:
   - component: {fileID: 6105308799085663174}
   - component: {fileID: 5200473834437762924}
   - component: {fileID: 1254334058832589238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door_R
   m_TagString: RightSide
   m_Icon: {fileID: 0}

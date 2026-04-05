@@ -32,10 +32,4 @@ public class Eraser : MonoBehaviour
         StartCoroutine(EraserSwipe());
 
     }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-
-    }
 }

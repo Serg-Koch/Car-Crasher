@@ -1,69 +1,47 @@
-using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class PlayerInput : MonoBehaviour
 {
-    /*
-    private Rigidbody rb;
-    private const int _carPoints = 10;
-    private const int _multiplier = 3;
-    //private GameManager _gameScore;
+    //public static event Action <bool> LMBClick;
+    //public bool IsLMBClicked {get; private set;} = false;
+    public static event Action LMBClickObject;
+    public static event Action LMBClickEmpty;
+    private LayerMask layerMask;
+    private Camera _mainCamera;
 
-    void OnTriggerEnter(Collider other)
+    private void LClick(Vector3 cursorPosition)
     {
-        switch (other.tag)
+        Ray ray = _mainCamera.ScreenPointToRay(cursorPosition);
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit, 100, layerMask))
         {
-            case "Floor":
-                FloorDestroy();
-                break;
-            case "BadPart":
-                ParentDestroy(0);
-                break;
-            case "GoodPart":
-                if (gameObject.tag != "Bad")
-                    ParentDestroy(_carPoints * _multiplier);
-                break;
-            default:
-                break;
-        }
-    }*/
-    /*
-    private void ParentDestroy(int points)
-    {
-        gameObject.transform.DetachChildren();
-        if (_gameScore.count + points < 0)
-        {
-            _gameScore.count = 0;
+            if(hit.collider.TryGetComponent<ObjectDestroy>(out var obj))
+            {
+                //Debug.Log("Works!");
+                obj.MouseDestroy();
+                LMBClickObject?.Invoke();
+            }
         }
         else
         {
-            _gameScore.count += points;
+            LMBClickEmpty?.Invoke();
+            //Debug.Log("NOT Works!");
         }
-        Destroy(gameObject);
+
     }
-    private void FloorDestroy()
+    void Awake()
     {
-        foreach (Transform child in transform)
+        _mainCamera = Camera.main;
+        layerMask = LayerMask.GetMask("Cars");
+    }
+
+    private void Update()
+    {
+    
+        if (Input.GetMouseButtonDown(0))
         {
-                child.gameObject.tag = "Inactive";
+            LClick(Input.mousePosition);
         }
-        gameObject.transform.DetachChildren();
-        Destroy(gameObject);
+        
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        int spawnPoint = Random.Range(0,spawn.Count);
-        //_gameScore = GameObject.Find("GameManager").GetComponent<GameManager>();
-        rb = GetComponent<Rigidbody>();
-        rb.linearVelocity = velocity[spawnPoint] * 30;
-        rb.AddTorque(new Vector3(2, 1, 4), ForceMode.Impulse);
-        transform.position = spawn[spawnPoint];
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }*/
 }
